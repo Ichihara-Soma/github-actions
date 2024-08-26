@@ -65,7 +65,7 @@ jobs:
           java-version: '17'
           cache: 'gradle'
           cache-dependency-path: | # optional
-            sub-project/*.gradle*
-            sub-project/**/gradle-wrapper.properties
+            demo/*.gradle*
+            demo/**/gradle-wrapper.properties
       - run: ./gradlew build --no-daemon
         working-directory: demo
