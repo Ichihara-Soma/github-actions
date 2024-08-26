@@ -37,3 +37,15 @@ jobs:
       - name: result
         run: |
           echo "sum result is ${{steps.sum-id.outputs.sum-result}}"
+
+  minus-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - id: minus-id
+        uses: ./.github/actions/minus
+        with:
+          x: 10
+          y: 5
+      - name: result
+        run: |
+          echo "minus result is ${{steps.minus-id.outputs.minus-result}}"
